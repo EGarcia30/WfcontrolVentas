@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/wcfReporte" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/wcfReporte" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfTopVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TopVentas" nillable="true" type="tns:TopVentas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTopVentas" nillable="true" type="tns:ArrayOfTopVentas" />
+  <xs:complexType name="TopVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TopVentas" nillable="true" type="tns:TopVentas" />
+  <xs:complexType name="ArrayOfTopPago">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TopPago" nillable="true" type="tns:TopPago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTopPago" nillable="true" type="tns:ArrayOfTopPago" />
+  <xs:complexType name="TopPago">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="totalPago" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TopPago" nillable="true" type="tns:TopPago" />
+  <xs:complexType name="ArrayOftopMarca">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="topMarca" nillable="true" type="tns:topMarca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftopMarca" nillable="true" type="tns:ArrayOftopMarca" />
+  <xs:complexType name="topMarca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cant" type="xs:int" />
+      <xs:element minOccurs="0" name="marca" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="topMarca" nillable="true" type="tns:topMarca" />
+</xs:schema>
